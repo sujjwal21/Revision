@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tooltip Example</title>
+  <title>Tooltip</title>
   <style>
-    body {
+    .container {
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -106,24 +106,26 @@
   </style>
 </head>
 <body>
-    <div class="tooltip-container tooltip-left">
-      Left
-      <span class="tooltip-text">Left</span>
+  <div class="container">
+      <div class="tooltip-container tooltip-left">
+        Left
+        <span class="tooltip-text">Left</span>
+      </div>
+      
+    <div class="tooltip-container tooltip-top">
+      Top
+      <span class="tooltip-text">Top</span>
     </div>
-  <div class="tooltip-container tooltip-top">
-    Top
-    <span class="tooltip-text">Top</span>
-  </div>
-
-  <div class="tooltip-container tooltip-bottom">
-    Bottom
-    <span class="tooltip-text">Bottom</span>
-  </div>
-
-
-  <div class="tooltip-container tooltip-right">
-    Right
-    <span class="tooltip-text">Right</span>
-  </div>
+  
+    <div class="tooltip-container tooltip-bottom">
+      Bottom
+      <span class="tooltip-text">Bottom</span>
+    </div>
+  
+    <div class="tooltip-container tooltip-right">
+      Right
+      <span class="tooltip-text">Right</span>
+    </div>
+    </div>
 </body>
 </html>

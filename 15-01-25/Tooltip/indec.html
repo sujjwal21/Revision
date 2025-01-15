@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      width: 120px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 5px;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip-container:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Tooltip on top */
+    .tooltip-top .tooltip-text {
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Tooltip on bottom */
+    .tooltip-bottom .tooltip-text {
+      top: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Tooltip on left */
+    .tooltip-left .tooltip-text {
+      top: 50%;
+      right: 125%;
+      transform: translateY(-50%);
+    }
+
+    /* Tooltip on right */
+    .tooltip-right .tooltip-text {
+      top: 50%;
+      left: 125%;
+      transform: translateY(-50%);
+    }
+
+    /* Arrow styling */
+    .tooltip-text::after {
+      content: "";
+      position: absolute;
+      border-width: 5px;
+      border-style: solid;
+    }
+
+    .tooltip-top .tooltip-text::after {
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-color: #555 transparent transparent transparent;
+    }
+
+    .tooltip-bottom .tooltip-text::after {
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-color: transparent transparent #555 transparent;
+    }
+
+    .tooltip-left .tooltip-text::after {
+      top: 50%;
+      right: -5px;
+      transform: translateY(-50%);
+      border-color: transparent transparent transparent #555;
+    }
+
+    .tooltip-right .tooltip-text::after {
+      top: 50%;
+      left: -5px;
+      transform: translateY(-50%);
+      border-color: transparent #555 transparent transparent;
+    }
+  </style>
+</head>
+<body>
+    <div class="tooltip-container tooltip-left">
+      Left
+      <span class="tooltip-text">Left</span>
+    </div>
+  <div class="tooltip-container tooltip-top">
+    Top
+    <span class="tooltip-text">Top</span>
+  </div>
+
+  <div class="tooltip-container tooltip-bottom">
+    Bottom
+    <span class="tooltip-text">Bottom</span>
+  </div>
+
+
+  <div class="tooltip-container tooltip-right">
+    Right
+    <span class="tooltip-text">Right</span>
+  </div>
+</body>
+</html>
